@@ -1,7 +1,13 @@
-import styles from "../styles/Home.module.css";
+// import styles from "../styles/Home.module.css";
+
+import MainLayout from "../components/mainLayout";
 
 const Home = () => {
-  return <div>Home</div>;
+  return (
+    <MainLayout>
+      <div>Home page</div>
+    </MainLayout>
+  );
 };
 
 export default Home;

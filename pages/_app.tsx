@@ -5,7 +5,7 @@ import "reset-css";
 const theme = extendTheme({
   colors: {
     gray: {
-      100: "#f2f1f5",
+      100: "#f2f1f6",
       200: "#f9f9f9",
       300: "#a6a6ac",
       400: "#3d3b42",
@@ -30,9 +30,13 @@ const theme = extendTheme({
 const MyApp = ({ Component, pageProps }) => {
   return (
     <ChakraProvider theme={theme}>
-      <PlayerLayout>
-        <Component {...pageProps} />;
-      </PlayerLayout>
+      {Component.authpage ? (
+        <Component {...pageProps} />
+      ) : (
+        <PlayerLayout>
+          <Component {...pageProps} />;
+        </PlayerLayout>
+      )}
     </ChakraProvider>
   );
 };
