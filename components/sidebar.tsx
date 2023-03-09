@@ -76,7 +76,7 @@ const Sidebar = () => {
                     <LinkOverlay as={NextLink} href={menu.route} passHref>
                       <ListIcon
                         as={menu.icon}
-                        color="gray.400"
+                        color="gray.500"
                         marginRight="20px"
                       />
                       {menu.name}
@@ -95,7 +95,7 @@ const Sidebar = () => {
                   <LinkOverlay as={NextLink} href={menu.route} passHref>
                     <ListIcon
                       as={menu.icon}
-                      color="gray.400"
+                      color="gray.500"
                       marginRight="20px"
                     />
                     {menu.name}

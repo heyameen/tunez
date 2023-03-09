@@ -13,7 +13,7 @@ const MainLayout = ({ children, image, subtitle, title, description }) => {
             borderRadius="3px"
           />
         </Box>
-        <Box padding="20px" lineHeight="40px" color="gray.400">
+        <Box padding="20px" lineHeight="40px" color="gray.500">
           <Text fontSize="x-small" fontWeight="bold" casing="uppercase">
             {subtitle}
           </Text>
