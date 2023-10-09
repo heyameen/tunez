@@ -12,7 +12,9 @@ const config: Config = {
         grey: {
           DEFAULT: "#3A383F",
           sidebar: "#F2F1F5",
-          txtLight: "#BBBBC0",
+          light: "#A6A6AC",
+          bg: "#F9F9F9",
+          soft: "#d8d8d8",
         },
         orange: {
           DEFAULT: "#EE732F",
