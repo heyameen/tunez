@@ -11,9 +11,10 @@ interface ModalProviderProps {
     products: ProductWithPrice[];
 }
 
-const ModalProvider: React.FC<ModalProviderProps> = () => {
+const ModalProvider: React.FC<ModalProviderProps> = ({ products }) => {
     const [isMounted, setIsMounted] = useState(false);
     
+    console.log(products)
     useEffect(() => {
         setIsMounted(true);
     }, []);

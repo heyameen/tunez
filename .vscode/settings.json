@@ -1,4 +1,0 @@
-{
-  "vetur.format.defaultFormatter.js": "prettier",
-  "cSpell.words": ["nextjs", "supabase", "tailwindcss"]
-}
