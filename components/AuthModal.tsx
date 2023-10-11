@@ -8,7 +8,6 @@ import {
     useSupabaseClient
 } from '@supabase/auth-helpers-react';
 import { useRouter } from 'next/navigation';
-
 import useAuthModal from "@/hooks/useAuthModal";
 
 import Modal from './Modal';
@@ -50,12 +49,22 @@ const AuthModal = () => {
                         default: {
                             colors: {
                                 brand: '#EE732F',
-                                brandAccent: '#EE732F'
+                                brandAccent: '#EE732F',
+                                defaultButtonBackgroundHover: '#3a383f',
+                                defaultButtonBackground: '#303134',
+                                defaultButtonText: 'white',
+                                dividerBackground: '#3a383f',
+
                             }
                         }
                     }
+                    // style: {
+                    //     button: { background: '#ee732f', color: 'white' },
+                    //     anchor: { color: '#3a383f' },
+                    //     //..
+                    // },
                 }}
-                theme="light"
+                // theme="light"
             />
         </Modal>
     );
