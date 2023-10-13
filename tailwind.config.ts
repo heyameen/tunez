@@ -15,6 +15,7 @@ const config: Config = {
           light: "#A6A6AC",
           bg: "#F9F9F9",
           soft: "#d8d8d8",
+          input: "#e8f0fe"
         },
         orange: {
           DEFAULT: "#EE732F",

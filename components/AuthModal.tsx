@@ -54,7 +54,6 @@ const AuthModal = () => {
                                 defaultButtonBackground: '#303134',
                                 defaultButtonText: 'white',
                                 dividerBackground: '#3a383f',
-
                             }
                         }
                     }
