@@ -19,10 +19,11 @@ const Library = () => {
         if (!user) {
             return authModal.onOpen();
         }
+        console.log(subscription, subscribeModal)
 
-        if (!subscription) {
-            return subscribeModal.onOpen();
-        }
+        // if (!subscription) {
+        //     return subscribeModal.onOpen();
+        // }
 
         return uploadModal.onOpen();
     };

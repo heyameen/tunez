@@ -22,18 +22,7 @@ const UploadModal = () => {
     const { user } = useUser();
     const router = useRouter();
 
-    const {
-        register,
-        handleSubmit,
-        reset,
-    } = useForm<FieldValues>({
-        defaultValues: {
-            author: '',
-            title: '',
-            song: null,
-            image: null,
-        }
-    });
+    const { register, handleSubmit, reset, formState: { isDirty, isValid } } = useForm<FieldValues>({ defaultValues: { author: '', title: '', song: null, image: null, } });
 
     const onChange = (open: boolean) => {
         if (!open) {
@@ -167,7 +156,7 @@ const UploadModal = () => {
                         {...register('image', { required: true })}
                     />
                 </div>
-                <Button disabled={isLoading} type="submit">
+                <Button disabled={isLoading || !isValid || !isDirty} type="submit">
                     Create
                 </Button>
             </form>
