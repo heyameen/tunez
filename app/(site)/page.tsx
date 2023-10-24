@@ -22,11 +22,11 @@ export default async function Home() {
       </Header>
       <div className="mt-2 mb-7 px-6">
         <div className="flex justify-between items-center">
-          <h1 className="text-grey-light text-2xl font-semibold">
+          <h1 className="text-grey text-2xl font-semibold">
             Newest songs
           </h1>
         </div>
-        <div>
+        <div className="text-grey-light">
           List of Songs!
         </div>
         <PageContent songs={songs} />

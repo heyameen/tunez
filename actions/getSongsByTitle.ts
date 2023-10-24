@@ -3,14 +3,22 @@ import { cookies } from "next/headers";
 
 import { Song } from "@/types";
 
-const getSongs = async (): Promise<Song[]> => {
+import getSongs from "./getSongs";
+
+const getSongsByTitle = async (title: string): Promise<Song[]> => {
   const supabase = createServerComponentClient({
     cookies: cookies,
   });
 
+  if (!title) {
+    const allSongs = await getSongs();
+    return allSongs;
+  }
+
   const { data, error } = await supabase
     .from("songs")
     .select("*")
+    .ilike("title", `%${title}%`)
     .order("created_at", { ascending: false });
 
   if (error) {
@@ -21,4 +29,4 @@ const getSongs = async (): Promise<Song[]> => {
   return (data as any) || [];
 };
 
-export default getSongs;
+export default getSongsByTitle;
