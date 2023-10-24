@@ -19,7 +19,6 @@ const AuthModal = () => {
 
     const supabaseClient = useSupabaseClient();
     useEffect(() => {
-        console.log("In Auth Modal component useEffect", session)
         if (session) {
             router.refresh();
             onClose();
