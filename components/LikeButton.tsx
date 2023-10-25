@@ -15,9 +15,7 @@ interface LikeButtonProps {
 
 const LikeButton: React.FC<LikeButtonProps> = ({ songId }) => {
     const router = useRouter();
-    const {
-        supabaseClient
-    } = useSessionContext();
+    const { supabaseClient } = useSessionContext();
     const authModal = useAuthModal();
     const { user } = useUser();
 
@@ -90,7 +88,7 @@ const LikeButton: React.FC<LikeButtonProps> = ({ songId }) => {
             transition"
             onClick={handleLike}
         >
-            <Icon color={isLiked ? '#ee732f' : 'white'} size={25} />
+            <Icon color={isLiked ? '#ee732f' : 'grey'} size={25} />
         </button>
     );
 }
