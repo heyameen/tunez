@@ -32,7 +32,7 @@ const LikedContent: React.FC<LikedContentProps> = ({ songs }) => {
                 flex-col 
                 gap-y-2 
                 w-full px-6 
-                text-grey"
+                text-grey-body"
             >
                 No liked songs.
             </div>

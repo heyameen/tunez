@@ -52,7 +52,7 @@ const ListItem: React.FC<ListItemProps> = ({ image, name, href }) => {
                     alt="Image"
                 />
             </div>
-            <p className="font-medium truncate py-5 text-grey">
+            <p className="font-medium truncate py-5 text-grey-body">
                 {name}
             </p>
             <div
@@ -64,7 +64,7 @@ const ListItem: React.FC<ListItemProps> = ({ image, name, href }) => {
                     flex 
                     items-center 
                     justify-center 
-                    bg-orange
+                    bg-blue
                     p-4 
                     drop-shadow-md 
                     right-5

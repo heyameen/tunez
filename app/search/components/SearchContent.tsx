@@ -22,7 +22,7 @@ const SearchContent: React.FC<SearchContentProps> = ({ songs }) => {
                 gap-y-2 
                 w-full 
                 px-6 
-                text-grey-light "
+                text-grey-body "
             >
                 No songs found.
             </div>

@@ -12,7 +12,7 @@ export default async function Home() {
     <div className="bg-grey-bg rounded-lg h-full w-full overflow-hidden overflow-y-auto">
       <Header>
         <div className="mb-2">
-          <h1 className="text-grey text-3xl font-semibold">
+          <h1 className="text-grey-titles text-4xl font-semibold">
             Welcome Back
           </h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-3 mt-4">
@@ -22,11 +22,11 @@ export default async function Home() {
       </Header>
       <div className="mt-2 mb-7 px-6">
         <div className="flex justify-between items-center">
-          <h1 className="text-grey text-2xl font-semibold">
+          <h1 className="text-grey-titles text-2xl font-semibold">
             Newest songs
           </h1>
         </div>
-        <div className="text-grey-light">
+        <div className="text-grey-body">
           List of Songs!
         </div>
         <PageContent songs={songs} />

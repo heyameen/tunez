@@ -54,8 +54,8 @@ const MediaItem: React.FC<MediaItemProps> = ({ data, onClick }) => {
                 />
             </div>
             <div className="flex flex-col gap-y-1 overflow-hidden">
-                <p className="text-grey truncate">{data.title}</p>
-                <p className="text-grey-light text-sm truncate">
+                <p className="text-grey-title truncate">{data.title}</p>
+                <p className="text-grey-body text-sm truncate">
                     By {data.author}
                 </p>
             </div>

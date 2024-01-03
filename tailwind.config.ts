@@ -11,14 +11,15 @@ const config: Config = {
       colors: {
         grey: {
           DEFAULT: "#3A383F",
-          sidebar: "#F2F1F5",
-          light: "#A6A6AC",
-          bg: "#F9F9F9",
-          soft: "#d8d8d8",
-          input: "#e8f0fe"
+          sidebar: "#F2F2F2",
+          bg: "#F7F7F7",
+          soft: "#D3E1E6",
+          body: "#424242",
+          titles: "#303030",
+          light: "#757575",
         },
-        orange: {
-          DEFAULT: "#EE732F",
+        blue: {
+          DEFAULT: "#4682B4",
         },
       },
     },

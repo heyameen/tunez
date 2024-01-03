@@ -30,12 +30,12 @@ const SidebarItem: React.FC<SidebarItemProps> = ({
                 text-md
                 font-medium
                 cursor-pointer
-                hover:text-orange           
+                hover:text-blue           
                 transition
-                text-grey
+                text-grey-body
                 px-2
-                py-1`,
-                active && "text-orange bg-white rounded-md ",
+                `,
+                active && "text-blue border-l-2 border-l-blue",
             )}
         >
             <Icon size={26} />

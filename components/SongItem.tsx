@@ -32,6 +32,7 @@ const SongItem: React.FC<SongItemProps> = ({ data, onClick }) => {
                 cursor-pointer 
                 hover:bg-grey-soft/30
                 transition 
+                shadow-sm
                 p-3"
         >
             <div
@@ -51,11 +52,11 @@ const SongItem: React.FC<SongItemProps> = ({ data, onClick }) => {
                 />
             </div>
             <div className="flex flex-col items-start w-full pt-4 gap-y-1">
-                <p className="font-semibold truncate w-full">
+                <p className="text-lg font-semibold truncate w-full">
                     {data.title}
                 </p>
                 <p className="
-                    text-neutral-400 
+                    text-grey-body 
                     text-sm 
                     pb-4 
                     w-full 
