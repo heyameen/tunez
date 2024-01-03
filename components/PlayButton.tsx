@@ -10,7 +10,7 @@ const PlayButton = () => {
             flex 
             items-center 
             justify-center 
-            bg-orange 
+            bg-blue 
             p-4 
             drop-shadow-md 
             translate

@@ -50,13 +50,13 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
                         onClick={() => router.back()}
                         className="flex items-center justify-center hover:opacity-75 transition"
                     >
-                        <RxCaretLeft className="text-grey" size={35} />
+                        <RxCaretLeft className="text-grey-titles" size={35} />
                     </button>
                     <button
                         onClick={() => router.forward()}
                         className="flex items-center justify-center hover:opacity-75 transition"
                     >
-                        <RxCaretRight className="text-grey" size={35} />
+                        <RxCaretRight className="text-grey-titles" size={35} />
                     </button>
                 </div>
                 <div className="flex md:hidden gap-x-2 items-center">
@@ -72,13 +72,13 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
                         <div className="flex gap-x-4 items-center">
                             <Button
                                 onClick={handleLogout}
-                                className="bg-orange px-6 py-2"
+                                className="bg-blue px-6 py-2"
                             >
                                 Logout
                             </Button>
                             <Button
                                 onClick={() => router.push('/account')}
-                                className="bg-orange border-r-4"
+                                className="bg-blue border-r-4"
                             >
                                 <FaUserAlt />
                             </Button>
@@ -86,10 +86,10 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
                     ) : (
                         <>
                             <div>
-                                <Button onClick={authModal.onOpen} className="bg-transparent text-grey font-medium">Sign Up!</Button>
+                                <Button onClick={authModal.onOpen} className="bg-transparent text-grey-titles font-medium">Sign Up!</Button>
                             </div>
                             <div>
-                                <Button onClick={authModal.onOpen} className="bg-orange px-4 py-2">Log in!</Button>
+                                <Button onClick={authModal.onOpen} className="bg-blue px-4 py-2">Log in!</Button>
                             </div>
                         </>
                     )}
