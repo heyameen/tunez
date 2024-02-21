@@ -8,17 +8,17 @@ import { Song } from "@/types";
 import PlayButton from "./PlayButton";
 
 interface SongItemProps {
-    data: Song;
-    onClick: (id: string) => void;
+  data: Song;
+  onClick: (id: string) => void;
 }
 
 const SongItem: React.FC<SongItemProps> = ({ data, onClick }) => {
-    const imagePath = useLoadImage(data);
+  const imagePath = useLoadImage(data);
 
-    return (
-        <div
-            onClick={() => onClick(data.id)}
-            className="
+  return (
+    <div
+      onClick={() => onClick(data.id)}
+      className="
                 relative 
                 group 
                 flex 
@@ -34,46 +34,48 @@ const SongItem: React.FC<SongItemProps> = ({ data, onClick }) => {
                 transition 
                 shadow-sm
                 p-3"
-        >
-            <div
-                className="
-                    relative 
-                    aspect-square 
-                    w-full
-                    h-full 
-                    rounded-md 
-                    overflow-hidden"
-            >
-                <Image
-                    className="object-cover"
-                    src={imagePath || '/images/music-placeholder.png'}
-                    fill
-                    alt="Image"
-                />
-            </div>
-            <div className="flex flex-col items-start w-full pt-4 gap-y-1">
-                <p className="text-lg font-semibold truncate w-full">
-                    {data.title}
-                </p>
-                <p className="
+    >
+      <div
+        className="
+            relative
+            aspect-square
+            w-full
+            h-full
+            rounded-md
+            overflow-hidden
+        "
+      >
+        <Image
+          className="object-cover"
+          src={imagePath || "/images/music-placeholder.png"}
+          fill
+          alt="Image"
+          sizes="100vw"
+        />
+      </div>
+      <div className="flex flex-col items-start w-full pt-4 gap-y-1">
+        <p className="text-lg font-semibold truncate w-full">{data.title}</p>
+        <p
+          className="
                     text-grey-body 
                     text-sm 
                     pb-4 
                     w-full 
                     truncate"
-                >
-                    By {data.author}
-                </p>
-            </div>
-            <div className=" 
+        >
+          By {data.author}
+        </p>
+      </div>
+      <div
+        className=" 
                 absolute 
                 bottom-24 
                 right-5"
-            >
-                <PlayButton />
-            </div>
-        </div>
-    );
-}
+      >
+        <PlayButton />
+      </div>
+    </div>
+  );
+};
 
 export default SongItem;

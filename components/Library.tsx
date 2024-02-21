@@ -5,7 +5,7 @@ import { AiOutlinePlus } from "react-icons/ai";
 import { useUser } from "@/hooks/useUser";
 import useSubscribeModal from "@/hooks/useSubscribeModal";
 import useAuthModal from "@/hooks/useAuthModal";
-import useUploadModal from '@/hooks/useUploadModal';
+import useUploadModal from "@/hooks/useUploadModal";
 import useOnPlay from "@/hooks/useOnPlay";
 import { Song } from "@/types";
 import MediaItem from "./MediaItem";
@@ -27,8 +27,6 @@ const Library: React.FC<LibraryProps> = ({ songs }) => {
         if (!user) {
             return authModal.onOpen();
         }
-        console.log(subscription, subscribeModal)
-
         // if (!subscription) {
         //     return subscribeModal.onOpen();
         // }
