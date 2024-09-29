@@ -6,6 +6,7 @@ import useLoadImage from "@/hooks/useLoadImages";
 import { Song } from "@/types";
 
 import PlayButton from "./PlayButton";
+import React from "react";
 
 interface SongItemProps {
   data: Song;

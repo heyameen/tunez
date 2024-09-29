@@ -1,13 +1,13 @@
 import { Song } from "@/types";
 
 import usePlayer from "./usePlayer";
+import useSubscribeModal from "./useSubscribeModal";
 import useAuthModal from "./useAuthModal";
-// import useSubscribeModal from "./useSubscribeModal";
 import { useUser } from "./useUser";
 
 const useOnPlay = (songs: Song[]) => {
   const player = usePlayer();
-  // const subscribeModal = useSubscribeModal();
+  const subscribeModal = useSubscribeModal();
   const authModal = useAuthModal();
   const { subscription, user } = useUser();
 
