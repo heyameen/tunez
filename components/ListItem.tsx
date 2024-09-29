@@ -8,28 +8,28 @@ import useAuthModal from "@/hooks/useAuthModal";
 import { useUser } from "@/hooks/useUser";
 
 interface ListItemProps {
-    image: string;
-    name: string;
-    href: string;
+  image: string;
+  name: string;
+  href: string;
 }
 
 const ListItem: React.FC<ListItemProps> = ({ image, name, href }) => {
-    const router = useRouter();
-    const authModal = useAuthModal();
-    const { user } = useUser();
+  const router = useRouter();
+  const authModal = useAuthModal();
+  const { user } = useUser();
 
-    const onClick = () => {
-        if (!user) {
-            return authModal.onOpen();
-        }
+  const onClick = () => {
+    if (!user) {
+      return authModal.onOpen();
+    }
 
-        router.push(href);
-    };
+    router.push(href);
+  };
 
-    return (
-        <button
-            onClick={onClick}
-            className="
+  return (
+    <button
+      onClick={onClick}
+      className="
                 relative 
                 group 
                 flex 
@@ -43,20 +43,19 @@ const ListItem: React.FC<ListItemProps> = ({ image, name, href }) => {
                 transition 
                 pr-4
             "
-        >
-            <div className="relative min-h-[64px] min-w-[64px]">
-                <Image
-                    className="object-cover"
-                    src={image}
-                    fill
-                    alt="Image"
-                />
-            </div>
-            <p className="font-medium truncate py-5 text-grey-body">
-                {name}
-            </p>
-            <div
-                className="
+    >
+      <div className="relative min-h-[64px] min-w-[64px]">
+        <Image
+          className="object-cover"
+          src={image}
+          fill
+          alt="Image"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        />
+      </div>
+      <p className="font-medium truncate py-5 text-grey-body">{name}</p>
+      <div
+        className="
                     absolute 
                     transition 
                     opacity-0 
@@ -71,11 +70,11 @@ const ListItem: React.FC<ListItemProps> = ({ image, name, href }) => {
                     group-hover:opacity-100 
                     hover:scale-110
                 "
-            >
-                <FaPlay className="text-white" />
-            </div>
-        </button>
-    );
-}
+      >
+        <FaPlay className="text-white" />
+      </div>
+    </button>
+  );
+};
 
 export default ListItem;
