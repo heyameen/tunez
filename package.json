@@ -11,7 +11,6 @@
   "dependencies": {
     "@radix-ui/react-dialog": "^1.0.4",
     "@radix-ui/react-slider": "^1.1.2",
-    "@stripe/react-stripe-js": "^2.8.0",
     "@stripe/stripe-js": "^4.5.0",
     "@supabase/auth-helpers-nextjs": "^0.8.1",
     "@supabase/auth-helpers-react": "^0.4.2",
@@ -49,5 +48,9 @@
     "supabase": "^1.100.1",
     "tailwindcss": "^3",
     "typescript": "^5"
+  },
+  "optionalDependencies": {
+    "bufferutil": "^4.0.8",
+    "utf-8-validate": "^6.0.4"
   }
 }
