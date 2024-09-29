@@ -11,7 +11,6 @@ const nextConfig = {
 
     config.module.rules.push({
       test: /\.(js|mjs|jsx|ts|tsx)$/,
-      loader: 'null-loader',
       include: [
         /\/node_modules\/bufferutil/,
         /\/node_modules\/utf-8-validate/,
